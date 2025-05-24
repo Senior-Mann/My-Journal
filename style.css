@@ -1,0 +1,223 @@
+/* Base Styles */
+body {
+  background-color: black;
+  color: white;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin: 20px 10px;
+}
+h1 {
+  background: linear-gradient(90deg, #ff8a00, #c52e71, #00c6ff);
+  background-size: 200%;
+  background-clip: text;
+  color: transparent;
+  animation: text-animation 2s infinite linear;
+}
+
+@keyframes text-animation {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 200%;
+  }
+}
+/* Navigation */
+nav {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  padding: 5px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 30px;
+  margin: 0;
+  display: flex;
+  gap: 60px;
+  font-size: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+  color: rgb(151, 240, 151);
+}
+
+/* Welcome Section */
+.welcome-Message {
+  padding: 40px 30px 20px;
+  font-size: larger;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fuk-logo {
+  background-color: white;
+  width: 250px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.fuk-logo:hover {
+  transform: scale(0.95);
+  box-shadow: 0 10px 20px rgba(129, 233, 129, 0.3);
+}
+
+.fuk-logo img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* About Me Section */
+.About-me {
+  margin: 30px 10px;
+  margin-left: 20px
+}
+
+.About-me h2{
+  background: linear-gradient(90deg, #ff8a00, #c52e71, #00c6ff);
+  background-size: 200%;
+  background-clip: text;
+  color: transparent;
+  animation: text-animation 2s infinite linear;
+}
+
+@keyframes text-animation {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 200%;
+  }
+}
+
+.About {
+  font-size: 18px;
+  margin-left: 20px;
+}
+
+.MyPhoto {
+  width: 300px;
+  max-width: 90%;
+  height: auto;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 20px auto;
+  margin-left: 1000px;
+  margin-top: -100px;
+}
+
+.MyPhoto:hover {
+  transform: scale(0.95);
+  box-shadow: 0 10px 20px rgba(161, 182, 161, 0.3);
+}
+
+
+.MyPhoto img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/* Journal Section */
+.My-journal {
+  padding: 30px;
+}
+
+.month-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.month-box {
+  background-color: white;
+  width: 300px;
+  max-width: 90%;
+  height: auto;
+  border-radius: 40px;
+  padding: 20px;
+  box-sizing: border-box;
+  color: black;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.month-box:hover {
+  transform: scale(0.95);
+  box-shadow: 0 10px 20px rgba(161, 182, 161, 0.3);
+}
+
+
+.month-box h4 {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.month-box ul {
+  list-style: none;
+  padding: 0;
+  margin-left: 10px;
+}
+
+.month-box li {
+  margin-bottom: 10px;
+}
+
+.month-box a {
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.month-box a:hover {
+  color: green;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .welcome-Message {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .fuk-logo {
+    margin: 20px auto;
+  }
+
+  .About {
+    text-align: center;
+  }
+
+  .month-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}

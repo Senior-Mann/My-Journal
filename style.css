@@ -9,6 +9,7 @@ body {
 
 h1 {
   margin: 20px 10px;
+  font-size: 25px;
 }
 h1 {
   background: linear-gradient(90deg, #ff8a00, #c52e71, #00c6ff);

@@ -5,19 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Journal Page</title>
   <link rel="stylesheet" href="style.css" />
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+/>
+
 </head>
 <body>
   <h1>Welcome To My SIWES/IT experience 🧠💻</h1>
 
   <!-- Navigation Bar -->
-  <nav>
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About Me</a></li>
-      <li><a href="#">Journal</a></li>
-      <li><a href="#">Contact</a></li>
+<nav>
+  <div class="nav-container">
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div> <!-- Hamburger icon -->
+    <ul id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#journal">Journal</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
-  </nav>
+  </div>
+</nav>
+
 
   <!-- Welcome Section -->
   <section class="welcome-Message">
@@ -28,14 +37,16 @@
     To backend development, real-world problem-solving, and more.<br>
     Join me as I turn theory into practice, one week at a time!
     </p>
+    
     <div class="fuk-logo">
       <img src="fuklogo.jpg" alt="FUK Logo" />
     </div>
   </section>
 
   <!-- About Me Section -->
+   <section class="About-me" id="about"></section>
   <section class="About-me">
-    <h2>About Me</h2>
+    <h1>About Me</h1>
     <p class="About"> My name is Usman Yahaya, also known as Sman or GoldsManFx. <br>
       I’m a passionate Computer Science student currently undergoing <br>
       my SIWES (INDUSTRIAL TRAINING) At Britech Computer LTD. <br>
@@ -49,24 +60,27 @@
   </section>
 
   <!-- Journal Months -->
+   <section class="journal-section" id="journal">
   <section class="My-journal">
     <h1>My Journal Section.....</h1>
     <div class="month-grid">
-      <div class="month-box">
+      <div class="month-box fade-in"> 
         <h4>First Month</h4>
         <ul>
           <li><a href="https://www.w3schools.com/html/">Learned HTML</a></li>
           <li><a href="#">Built My First Page</a></li>
         </ul>
       </div>
-      <div class="month-box">
+      <div class="month-box fade-in"> 
+
         <h4>Second Month</h4>
         <ul>
           <li><a href="https://www.w3schools.com/css/">Started CSS</a></li>
           <li><a href="#">Styled My Website</a></li>
         </ul>
       </div>
-      <div class="month-box">
+      <div class="month-box fade-in">
+
         <h4>Third Month</h4>
         <ul>
           <li><a href="#">Responsive Design</a></li>
@@ -76,21 +90,24 @@
     </div>
 
     <div class="month-grid">
-      <div class="month-box">
+      <div class="month-box fade-in"> 
+
         <h4>Fourth Month</h4>
         <ul>
           <li><a href="https://www.w3schools.com/js/DEFAULT.asp">JavaScript Basics</a></li>
           <li><a href="#">DOM Manipulation</a></li>
         </ul>
       </div>
-      <div class="month-box">
+      <div class="month-box fade-in"> 
+
         <h4>Fifth Month</h4>
         <ul>
           <li><a href="https://www.w3schools.com/js/js_api_intro.asp">APIs</a></li>
           <li><a href="#">Real Projects</a></li>
         </ul>
       </div>
-      <div class="month-box">
+      <div class="month-box fade-in">
+
         <h4>Sixth Month</h4>
         <ul>
           <li><a href="#">Final Touches</a></li>
@@ -99,5 +116,78 @@
       </div>
     </div>
   </section>
+
+  <!-- Contac Me Section -->
+    <section class="contact" id="contact">
+  <section id="contact" style="padding: 30px; color: white; text-align: center;">
+  <h2>Contact Me</h2>
+  <p>Feel free to reach out anytime!</p>
+  <p>Phone: +234 9037360404</p>
+  <p>
+    <a href="https://wa.me/2349037360404" target="_blank" class="contact-link whatsapp">
+      <i class="fab fa-whatsapp"></i> WhatsApp
+    </a>
+    <a href="mailto:usmanyahaya501@gmail.com" class="contact-link email">
+      <i class="fas fa-envelope"></i> Email
+    </a>
+  </p>
+</section>
+
+<!-- Donation Section -->
+<section id="donation" style="padding: 20px; text-align: center; color: white; background-color: #111; border-radius: 10px; margin: 30px auto; width: 70%; max-width: 400px;">
+  <p style="font-size: 18px; line-height: 1.6;">
+    Support this site and my work <br> 
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLScwPwL5x2qdL6EsbCcK-bpjEPJjX8QM1YbJb2KHP0lZp1yJ7A/viewform?usp=sharing&ouid=106462643167886791286" target="_blank" style="color: lightgreen; font-weight: bold; text-decoration: underline;">
+      Donate here if you wish.
+    </a>
+  </p>
+</section>
+
+  <!-- JavaScript -->
+
+  <!-- JS for Month box anima-->
+  <script>
+  const boxes = document.querySelectorAll('.fade-in');
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.2
+  });
+
+  boxes.forEach(box => observer.observe(box));
+</script>
+
+<!-- JS for Nav link items and icon -->
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const navLinks = document.getElementById('nav-links');
+
+  // Toggle menu on icon click
+  toggle.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+
+  // Hide menu on nav link click (for mobile)
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('show');
+    });
+  });
+
+  // Hide menu when clicking outside
+  document.addEventListener('click', (event) => {
+    const isClickInsideNav = toggle.contains(event.target) || navLinks.contains(event.target);
+    if (!isClickInsideNav) {
+      navLinks.classList.remove('show');
+    }
+  });
+</script>
+
 </body>
 </html>

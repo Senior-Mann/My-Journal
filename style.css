@@ -7,11 +7,11 @@ body {
   padding: 0;
 }
 
-h1 {
+h1 {  /* Apply to all h1 */
   margin: 20px 10px;
  font-size: 25px;
 }
-h1{
+h1 {
   background: linear-gradient(90deg, #ff8a00, #c52e71, #00c6ff);
   background-size: 200%;
   background-clip: text;
@@ -69,7 +69,7 @@ html {
 #nav-links li a {
   color: white;
   text-decoration: none;
- 
+  
 }
 
 #nav-links li a:hover {
@@ -110,17 +110,7 @@ html {
   align-items: center;
 }
 
-.welcome-Message {
-  opacity: 0;
-  animation: fadeInText 2s ease forwards;
-}
 
-/* Keyframes */
-@keyframes fadeInText {
-  to {
-    opacity: 1;
-  }
-}
 
 .fuk-logo {
   background-color: white;

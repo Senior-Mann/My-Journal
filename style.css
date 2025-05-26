@@ -11,7 +11,7 @@ h1 {
   margin: 20px 10px;
  font-size: 25px;
 }
-h1 {
+h1{
   background: linear-gradient(90deg, #ff8a00, #c52e71, #00c6ff);
   background-size: 200%;
   background-clip: text;
@@ -28,17 +28,7 @@ h1 {
   }
 }
 
-h1 {
-  opacity: 0;
-  animation: fadeInText 2s ease forwards;
-}
 
-/* Keyframes */
-@keyframes fadeInText {
-  to {
-    opacity: 1;
-  }
-}
 
 /* Basic Nav Styling */
 nav {
@@ -118,6 +108,18 @@ html {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+}
+
+.welcome-Message {
+  opacity: 0;
+  animation: fadeInText 2s ease forwards;
+}
+
+/* Keyframes */
+@keyframes fadeInText {
+  to {
+    opacity: 1;
+  }
 }
 
 .fuk-logo {
